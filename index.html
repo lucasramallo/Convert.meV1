@@ -12,9 +12,23 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-    <link rel="apple-touch-icon" sizes="180x180" href="./img/icons/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="./img/icons/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="./img/icons/favicon-16x16.png">
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./img/icons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./img/icons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./img/icons/favicon-16x16.png"
+    />
   </head>
   <body>
     <div class="container">
@@ -25,11 +39,12 @@
         <selection class="main_left">
           <h1><b>Insira Aqui o Link do Seu </b>Vídeo</h1>
           <p>
-            Copie a URL do vídeo, cole no espaço abaixo, selecione o formato e inicie a conversão.
+            Copie a URL do vídeo, cole no espaço abaixo, selecione o formato e
+            inicie a conversão.
           </p>
           <div class="main-left-input">
             <img src="./img/youtube.png" alt="" />
-            <input type="text" class="link" placeholder="Link Aqui!" />
+            <input type="text" class="link" placeholder="Link" />
           </div>
           <div class="format-conteiner">
             <label for="Formato:"></label>
@@ -52,22 +67,25 @@
           <img src="./img/Img.png" alt="" />
         </selection>
       </main>
-  </div>
+    </div>
 
     <script>
-
-      $(".button_2").click(function(){
-        var link =$(".link").val();
-        var format =$(".format").children("option:selected").val();
+      $(".button_2").click(function () {
+        var link = $(".link").val();
+        var format = $(".format").children("option:selected").val();
         var src = "" + link + "=" + format + "";
         download(link, format);
       });
 
-      function download(link, format){
-        $('.button_2').html('<iframe style="width:180px; height:60px; border:none; overflow:hidden; margin-top:25px; border-radius: 20px; box-shadow: 0 20px 35px rgb(0, 0, 0, 20%), 0 15px 12px rgb(0, 0, 0, 8%);" src="https://loader.to/api/button/?url='+ link + '&f=' + format + '"></iframe>');
+      function download(link, format) {
+        $(".button_2").html(
+          '<iframe style="width:180px; height:60px; border:none; overflow:hidden; margin-top:25px; border-radius: 20px; box-shadow: 0 20px 35px rgb(0, 0, 0, 20%), 0 15px 12px rgb(0, 0, 0, 8%);" src="https://loader.to/api/button/?url=' +
+            link +
+            "&f=" +
+            format +
+            '"></iframe>'
+        );
       }
-
     </script>
-
   </body>
 </html>
